@@ -3,7 +3,7 @@
 /**
  * main - this is the main function
  *
- * Return: 0 when right
+ * Return: 0 when succesfull
  */
 
 int main(void)
