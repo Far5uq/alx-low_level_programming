@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+/**
+* main - the main function
+*
+* Return: is 0
+*/
+
+int main(void)
+{
+int c;
+char v;
+for (c = 0 ; c < 10 ; c++)
+putchar(c + '0');
+for (v = 'a' ; v <= 'f' ; v++)
+putchar(c + '0');
+putchar('\n');
+return (0);
+}
