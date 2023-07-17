@@ -3,7 +3,7 @@
 /**
  * main - main function
  *
- * Request: remains 0
+ * Return: remains 0
  */
 
 int main(void)
