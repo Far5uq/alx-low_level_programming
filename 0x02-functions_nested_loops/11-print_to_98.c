@@ -18,7 +18,7 @@ for (c = n ; c <= 98 ; c++)
 printf("%d", c);
 if (c != 98)
 printf(", ");
-}  
+}
 printf("\n");
 }
 else if (n < 0)
@@ -41,6 +41,6 @@ printf(", ");
 }
 printf("\n");
 }
-else if(n == 98)
+else if (n == 98)
 printf("%d\n", n);
-} 
+}
