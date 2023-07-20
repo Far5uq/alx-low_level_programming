@@ -42,5 +42,5 @@ printf(", ");
 printf("\n");
 }
 else if(n == 98)
-printf("%d\n", c);
+printf("%d\n", n);
 } 
