@@ -1,0 +1,15 @@
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * add - addition of varriables
+ *@c: parameter 1
+ *@a: parameter 2
+ *
+ * Return: Always 0.
+ */
+
+int add(int c, int a)
+{
+return (c + a);
+}
