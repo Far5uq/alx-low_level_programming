@@ -1,4 +1,4 @@
-include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -10,7 +10,7 @@ include <stdio.h>
  * Return: Always 0.
  */
 
-int main()
+int main(void)
 {
 char password[PASSWORD_LENGTH + 1];
 srand(time(NULL));
@@ -20,5 +20,5 @@ password[i] = rand() % ('~' - ' ' + 1) + ' ';
 }
 password[PASSWORD_LENGTH] = '\0';
 printf("Generated Password: %s\n", password);
-return 0;
+return (0);
 }
