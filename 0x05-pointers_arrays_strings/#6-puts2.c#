@@ -1,0 +1,8 @@
+#include "main.h"
+
+/**
+ * puts2 - print every other character
+ * @str: pointer
+ *
+ * Return_putchar(str[i]);
+	}
