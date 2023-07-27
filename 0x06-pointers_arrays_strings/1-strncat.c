@@ -15,9 +15,10 @@ int len = strlen(dest);
 int c;
 for (c = 0 ; c < n && *src != '\0' ; c++)
 {
-dest[len + 1] = *src;
+dest[len] = *src;
 src++;
+len++;
 }
-dest[len + 1] = '\0';
+dest[len] = '\0';
 return (dest);
 }

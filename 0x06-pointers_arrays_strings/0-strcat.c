@@ -18,6 +18,6 @@ destlen++;
 for (c = 0 ; src[c] != '\0' ; c++)
 srclen++;
 for (c = 0 ; c <= srclen ; c++)
-dest[destlen + 1] = src[c];
+dest[destlen + c] = src[c];
 return (dest);
 }
