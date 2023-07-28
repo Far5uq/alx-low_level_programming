@@ -10,15 +10,14 @@
 
 char *_strcat(char *dest, char *src)
 {
-int destlen = 0;
-int srclen = 0;
-int c;
-while (dest[c] != '\0')
+int dlen;
+int slen;
+while (dest[dlen] != '\0')
 destlen++;
-for (c = 0 ; src[c] != '\0' ; c++)
+for (slen = 0 ; src[slen] != '\0' ; slen++)
 {
-dest[destlen + c] = src[c];
+dest[dlen] = src[slen];
 }
-dest[deslen + c] = '\0';
+dest[dlen] = '\0';
 return (dest);
 }
