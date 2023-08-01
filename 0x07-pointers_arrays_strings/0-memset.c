@@ -1,11 +1,11 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * *_memset - fills a memory with constant bytes
- * @*s: the address of memory to print
- * @b: the size of the memory to print
- * @n: memory
+ * @s: pointer 1
+ * @b: constant bytes
+ * @n: bytes
+ *
  * Return: s
  */
 

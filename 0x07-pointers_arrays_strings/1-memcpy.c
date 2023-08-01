@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * *_memcpy - prints mem. area
- * @*dest: the address of memory to print
- * @*src: the size of the memory to print
- * @n: what to print
+ * *_memcpy - copies bytes
+ * @dest: pointer 1
+ * @src: the bytes to be copied
+ * @n: bytes
  *
- * Return: Nothing.
+ * Return: dest
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
