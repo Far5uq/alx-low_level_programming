@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+/**
+ * is_prime_helper - finds prime number
+ * @n: integer
+ *
+ * Return: Always 0.
+ */
+
+int is_prime_helper(int n)
+{
+int divisor;
+if (divisor <= 1)
+{
+return (1);
+}
+if (n % divisor == 0)
+{
+return (0);
+}
+return (n , divisor - 1);
+}
+{
+if (n <= 1)
+{
+return (0);
+}
+return (n, n - 1);
+}
