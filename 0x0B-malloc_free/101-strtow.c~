@@ -1,0 +1,97 @@
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+
+char **strtow(char *str)
+{
+int is_whitespace;
+int count_words;
+int count;
+int is_word;
+int num_words;
+char **word_array;
+int word_count;
+int word_start;
+int i;
+int j;
+int word_length;
+if (is_whitespace(c))
+return (c == ' ' || c == '\t' || c == '\n');
+}
+if (count_words(*str))
+{
+count = 0;
+is_word = 0;
+while (*str)
+{
+if (is_whitespace(*str))
+{
+is_word = 0;
+}
+else if (!is_word)
+{
+is_word = 1;
+count++;
+}
+≈str++;
+}
+return (count);
+}
+{
+if (str == NULL || *str == '\0')
+return (NULL);
+num_words = count_words(str);
+word_array = (char **)malloc((num_words + 1) * sizeof(char *));
+if (word_array == NULL)
+{
+return (NULL);
+}
+word_count = 0;
+word_start = -1;
+for (i = 0; str[i] != '\0'; i++)
+{
+if (!is_whitespace(str[i]) && word_start == -1)
+{
+word_start = i;
+}
+else if (is_whitespace(str[i]) && word_start != -1)
+{
+word_length = i - word_start;
+word_array[word_count] = (char *)malloc((word_length + 1) * sizeof(char));
+if (word_array[word_count] == NULL)
+{
+for (j = 0; j < word_count; j++)
+{
+free(word_array[j]);
+}
+free(word_array);
+return (NULL);
+}
+strncpy(word_array[word_count], str + word_start, word_length);
+word_array[word_count][word_length] = '\0';
+word_count++;
+word_start = -1;
+}
+}
+if (word_start != -1)
+{
+word_length = strlen(str) - word_start;
+word_array[word_count] = (char *)malloc((word_length + 1) * sizeof(char));
+if (word_array[word_count] == NULL)
+{
+for (j = 0; j < word_count; j++)
+{
+free(word_array[j]);
+}
+free(word_array);
+return (NULL);
+}
+strcpy(word_array[word_count], str + word_start);
+word_count++;
+}
+word_array[word_count] = NULL;
+return (word_array);
+}
