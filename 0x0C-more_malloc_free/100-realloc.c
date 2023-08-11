@@ -5,7 +5,7 @@
 
 /**
  * *_realloc - reallocate memory
- * @*ptr: the pointer to the memory
+ * @ptr: the pointer to the memory
  * @old_size: the address in size
  * @new_size: the size of the memory to print
  *

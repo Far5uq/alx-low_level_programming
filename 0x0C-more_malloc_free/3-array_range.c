@@ -25,7 +25,7 @@ return (NULL);
 }
 for (i = 0; i <= max - min; i++)
 {
-arr[i - min] = i;
+arr[i] = min + i;
 }
 return (arr);
 }
