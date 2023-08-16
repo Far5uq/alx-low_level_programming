@@ -1,0 +1,14 @@
+#include "my_macros.h"
+#include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+
+int main()
+{
+int array[SIZE];
+return (0);
+}
