@@ -1,6 +1,12 @@
 #include <stdlib.h>
 #include "dog.h"
 
+/**
+ * free_dog - frees dog
+ *
+ * Return: Always 0.
+ */
+
 void free_dog(dog_t *d)
 {
 if (d)
