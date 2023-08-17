@@ -1,6 +1,5 @@
 #include "function_pointers.h"
 #include <stdio.h>
-#include <stddef.h>
 
 /**
  * print_name - prints a name using a given function
@@ -9,24 +8,24 @@
  *
  * Return: Nothing.
  */
-void print_name(char *name, void (*f)(char))
+void print_name(char *name, void (*f)(char *))
 {
 while (*name)
 {
 f(*name);
 name++;
 }
-_putchar('\n');
+putchar('\n');
 }
 
 /**
- * print_char - prints a character using putchar
+ * custom_putchar - prints a character using putchar
  * @c: character to be printed
  *
  * Return: Nothing.
  */
 
-void print_char(char c)
+void custom_putchar(char c)
 {
-_putchar(c);
+putchar(c);
 }
