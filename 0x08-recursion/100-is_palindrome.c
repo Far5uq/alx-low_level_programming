@@ -2,24 +2,34 @@
 #include <string.h>
 
 /**
- * is_palindrome - pallindrome
- * @s: integer
+ * is_palindrome_recursive - Recursive helper function to check for palindrome.
+ * @s: The string to check.
+ * @start: The starting index.
+ * @end: The ending index.
  *
- * Return: 1 if the number is prime, 0 otherwise.
+ * Return: 1 if 's' is a palindrome, 0 otherwise.
  */
+int is_palindrome_recursive(char *s, int start, int end)
+{
+if (start >= end)
+return (1);
+if (s[start] != s[end])
+return (0);
+return (is_palindrome_recursive(s, start + 1, end - 1));
+}
 
+
+/**
+ * is_palindrome - Check if a string is a palindrome.
+ * @s: The string to check.
+ *
+ * Return: 1 if 's' is a palindrome, 0 otherwise.
+ */
 int is_palindrome(char *s)
 {
-int left = 0;
-int right = strlen(s) - 1;
-while (left < right)
-{
-if (s[left] != s[right])
-{
-return (0);
-}
-left++;
-right--;
-}
+int len;
+len = strlen(s);
+if (len == 0)
 return (1);
+return (is_palindrome_recursive(s, 0, len - 1));
 }
