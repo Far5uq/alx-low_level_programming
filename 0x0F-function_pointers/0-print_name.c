@@ -10,22 +10,6 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-while (*name)
-{
-f(*name);
-name++;
-}
-putchar('\n');
-}
-
-/**
- * custom_putchar - prints a character using putchar
- * @c: character to be printed
- *
- * Return: Nothing.
- */
-
-void custom_putchar(char c)
-{
-putchar(c);
+if (name != NULL && f != NULL)
+f(name);
 }
