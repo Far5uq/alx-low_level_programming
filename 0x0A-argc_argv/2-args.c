@@ -1,25 +1,35 @@
 #include "main.h"
-#include <stdio.h>
+#include <unistd.h>
 
 /**
- * _allarg - print all argument
- * @arcc: argument 1
- * @argv: argument 2
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
  *
- * Return: Always 0.
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-
-int _allarg(int argc, char *argv[])
+int _putchar(char c)
 {
-int n;
-int c;
-for (n = 0; n < argc; n++)
-{
-for (c = 0; argv[n][c] != '\0'; c++)
-{
-putchar(argv[n][c]);
+return (write(1, &c, 1));
 }
-putchar('\n');
+
+/**
+ * main - Entry point
+ * @argc: The number of command-line arguments
+ * @argv: An array containing the command-line arguments
+ *
+ * Return: Always 0 (Success)
+ */
+int main(int argc, char *argv[])
+{
+int c, h;
+for (c = 0; c < argc; c++)
+{
+for (h = 0; argv[c][h] != '\0'; h++)
+{
+_putchar(argv[c][h]);
+}
+_putchar('\n');
 }
 return (0);
 }
